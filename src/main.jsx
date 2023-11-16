@@ -10,18 +10,25 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-
+import Dashboard from './page/Dashboard/Dashboard.jsx';
+import Team from './page/Team/Team.jsx';
+ 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
-      {/* <Route path="dashboard" element={<Dashboard />} /> */}
-      {/* ... etc. */}
-    </Route>
+
+      <Route index element={<Dashboard />} />
+      <Route path='/team' element={<Team />} />
+
+
+     </Route>
   )
 );
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+
+
     <RouterProvider router={router} />
-  </React.StrictMode>
+   </React.StrictMode>
 );
