@@ -1,9 +1,17 @@
+import { Box } from '@mui/material'
+import { DataGrid, GridToolbar } from '@mui/x-data-grid'
 import React from 'react'
+import { columns, rows } from './data'
 
 export default function Invoices() {
   return (
-    <div>
-      Invoices
-    </div>
+    <Box sx={{ height: 600,wigth:"98%" ,mx:"auto" }}>
+
+    <DataGrid 
+    checkboxSelection
+      slots={{toolbar: GridToolbar,}} 
+  
+  rows={rows} columns={columns}  />
+  </Box>
   )
 }

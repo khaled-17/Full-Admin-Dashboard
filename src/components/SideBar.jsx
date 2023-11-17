@@ -28,10 +28,14 @@ import React from "react";
 import { styled, useTheme } from "@mui/material/styles";
 import { Avatar, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { useLocation } from 'react-router-dom';
+
+import { grey } from '@mui/material/colors';
 
 export default function SideBar({ open, handleDrawerClose }) {
   const theme = useTheme();
   const navigate = useNavigate();
+  let location = useLocation();
 
   const Drawer = styled(MuiDrawer, {
     shouldForwardProp: (prop) => prop !== "open",
@@ -171,6 +175,7 @@ export default function SideBar({ open, handleDrawerClose }) {
                 minHeight: 48,
                 justifyContent: open ? "initial" : "center",
                 px: 2.5,
+                bgcolor:location.pathname==item.path?theme.palette.mode==="dark"?grey[800]:grey[400]:null
               }}
             >
               <ListItemIcon
@@ -204,6 +209,8 @@ export default function SideBar({ open, handleDrawerClose }) {
                 minHeight: 48,
                 justifyContent: open ? "initial" : "center",
                 px: 2.5,
+                bgcolor:location.pathname==item.path?theme.palette.mode==="dark"?grey[800]:grey[400]:null
+
               }}
             >
               <ListItemIcon
@@ -237,6 +244,8 @@ export default function SideBar({ open, handleDrawerClose }) {
                 minHeight: 48,
                 justifyContent: open ? "initial" : "center",
                 px: 2.5,
+                bgcolor:location.pathname==item.path?theme.palette.mode==="dark"?grey[800]:grey[400]:null
+
               }}
             >
               <ListItemIcon
