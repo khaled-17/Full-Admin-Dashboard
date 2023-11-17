@@ -102,7 +102,7 @@ export default function Form() {
           type="submit"
           sx={{ textTransform: "capitalize" }}
           variant="contained"
-        >
+        > 
           creat new User
         </Button>
       </Box>
