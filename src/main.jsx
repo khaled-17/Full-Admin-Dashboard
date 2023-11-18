@@ -11,8 +11,7 @@ import {
 } from "react-router-dom";
 import Dashboard from "./page/Dashboard/Dashboard.jsx";
 import Team from "./page/Team/Team.jsx";
-import Bar from "./page/Bar/Bar.jsx";
-import Calendar from "./page/Calendar/Calendar.jsx";
+ import Calendar from "./page/Calendar/Calendar.jsx";
 import Pie from "./page/Pie/Pie.jsx";
 import Invoices from "./page/Invoices/Invoices.jsx";
 import Line from "./page/Line/Line.jsx";
@@ -20,6 +19,7 @@ import Geography from "./page/Geography/Geography.jsx";
 import Form from "./page/Form/Form.jsx";
 import Contacts from "./page/Contacts/Contacts.jsx";
 import FAQ from "./page/FAQ/FAQ.jsx";
+import Barchart from "./page/Barchart/barchart.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -27,7 +27,7 @@ const router = createBrowserRouter(
       <Route index element={<Dashboard />} />
 
       <Route path="/team" element={<Team />} />
-      <Route path="/bar" element={<Bar />} />
+      <Route path="/bar" element={<Barchart />} />
       <Route path="/calendar" element={<Calendar />} />
       <Route path="/contacts" element={<Contacts />} />
        <Route path="/faq" element={<FAQ />} />
