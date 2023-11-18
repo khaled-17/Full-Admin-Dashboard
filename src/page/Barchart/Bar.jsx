@@ -1,7 +1,7 @@
 import React from "react";
 import { ResponsiveBar } from "@nivo/bar";
 import { Box, useTheme } from "@mui/material";
-import {TheTheme}  from "./TheTheme";
+import {TheTheme}  from "../TheTheme.js";
 
 const Bar = ({isDashbord = false ,TheData,TheKey }) => {
  
