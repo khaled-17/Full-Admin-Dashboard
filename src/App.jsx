@@ -8,7 +8,7 @@ import {
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
 
-import TopBar from "./components/Topbar";
+import TopBar from "./components/TopBar";
 import SideBar from "./components/SideBar";
 import { getDesignTokens } from "./theme";
 import { Outlet } from "react-router-dom";
