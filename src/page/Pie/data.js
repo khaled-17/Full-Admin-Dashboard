@@ -11,5 +11,11 @@ export const data=[
       "value": 217,
       "color": "hsl(253, 70%, 50%)"
     },
+    {
+      "id": "c++",
+      "label": "c++",
+      "value": 217,
+      "color": "hsl(253, 70%, 50%)"
+    },
  
   ]

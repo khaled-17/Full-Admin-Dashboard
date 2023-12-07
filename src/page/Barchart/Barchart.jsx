@@ -1,7 +1,7 @@
 import React from 'react'
 import Bar from './Bar'
-
-export default function Barchart() {
+ 
+export default function Barchart({isReUsableComponents=false}) {
 
 
 
@@ -9,8 +9,7 @@ export default function Barchart() {
    
   return (
     <div>
-        <h3>Bar</h3>
-      <Bar TheData={data} TheKey={key}/>
+       <Bar TheData={data} TheKey={key}/>
     </div>
   )
 }

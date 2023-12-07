@@ -20,22 +20,24 @@ import Form from "./page/Form/Form.jsx";
 import Contacts from "./page/Contacts/Contacts.jsx";
 import FAQ from "./page/FAQ/FAQ.jsx";
 import Barchart from "./page/Barchart/barchart.jsx";
+import NotFoundpage from "./page/NotFoundpage/NotFoundpage.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route index element={<Dashboard />} />
 
-      <Route path="/team" element={<Team />} />
-      <Route path="/bar" element={<Barchart />} />
-      <Route path="/calendar" element={<Calendar />} />
-      <Route path="/contacts" element={<Contacts />} />
-       <Route path="/faq" element={<FAQ />} />
-      <Route path="/form" element={<Form />} />
-      <Route path="/geography" element={<Geography />} />
-      <Route path="/invoices" element={<Invoices />} />
-      <Route path="/line" element={<Line />} />
-      <Route path="/pie" element={<Pie />} />
+      <Route path="team" element={<Team />} />
+      <Route path="bar" element={<Barchart />} />
+      <Route path="calendar" element={<Calendar />} />
+      <Route path="contacts" element={<Contacts />} />
+       <Route path="faq" element={<FAQ />} />
+      <Route path="form" element={<Form />} />
+      <Route path="geography" element={<Geography />} />
+      <Route path="invoices" element={<Invoices />} />
+      <Route path="line" element={<Line />} />
+      <Route path="pie" element={<Pie />} />
+      <Route path="*" element={<NotFoundpage />} />
      </Route>
   )
 );

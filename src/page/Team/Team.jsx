@@ -2,6 +2,7 @@ import React from "react";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { rows } from "./data";
 import { Box, Typography, useTheme } from "@mui/material";
+import Header from "../../components/Header";
 
 import {
   AdminPanelSettings,
@@ -76,6 +77,7 @@ export default function Team() {
                 access === "hybrid" ?'#3e2723':"#00c853",
             }}
           >
+
             {access==="Admin"&&(<AdminPanelSettings sx={{mx:1,color:'#fff'}}  fontSize="small" />)}
             {access==="jobseeker"&&(<Badge sx={{mx:1,color:'#fff'}}   fontSize="small" />)}
             {access==="business"&&(<BusinessOutlinedIcon sx={{mx:1,color:'#fff'}}   fontSize="small" />)}
@@ -89,6 +91,8 @@ export default function Team() {
 
   return (
        <Box sx={{ height: 600,wigth:"98%" ,mx:"auto" }}>
+        <Header titel={"Team"} />
+
         <DataGrid 
               // slots={{toolbar: GridToolbar,}} 
 

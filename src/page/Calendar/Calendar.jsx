@@ -7,6 +7,9 @@ import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import { INITIAL_EVENTS, createEventId } from './event-utils';
 import  './index.css'
+
+import Header from "../../components/Header";
+
 function Calendar() {
   const [weekendsVisible, setWeekendsVisible] = useState(true);
   const [currentEvents, setCurrentEvents] = useState([]);
@@ -58,8 +61,7 @@ function Calendar() {
 
   return (
     <>
-    <h1>calendar</h1>
-    <div className='demo-app'>
+     <div className='demo-app'>
       
       {renderSidebar()}
       <div className='demo-app-main'>

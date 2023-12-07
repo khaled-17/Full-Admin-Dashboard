@@ -3,6 +3,7 @@ import React from "react";
 import { ResponsiveLine } from '@nivo/line'
 import { data } from "./data";
 import {TheTheme} from '../TheTheme'
+ 
 export default function Line() {
 
     const myTheme = TheTheme(useTheme());
@@ -10,7 +11,7 @@ export default function Line() {
 
   return   (
   <Box sx={{height:"50vh"}}>
-
+ 
 
 <ResponsiveLine
   theme={myTheme}

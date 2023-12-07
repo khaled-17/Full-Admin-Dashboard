@@ -4,19 +4,19 @@ import { data } from './data'
 import { Box, useTheme } from '@mui/material'
 import { TheTheme } from '../TheTheme';
  
-export default function Pie() {
+export default function Pie({isReUsableComponents=false,ReData}) {
     
-    // const myTheme = TheTheme(useTheme());
+    const myTheme = TheTheme(useTheme());
   
     const theme= useTheme()
     return (
-        <Box sx={{height:"80vh"}}>
+        <Box sx={{height:isReUsableComponents?"220px":"80vh"}}>
 
 <ResponsivePie
-    // theme={myTheme}
+    theme={myTheme}
 
         data={data}
-        margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
+        margin={isReUsableComponents?{ top: 10, right: 10, bottom: 10, left: 10 }:{ top: 40, right: 80, bottom: 80, left: 80 }}
         innerRadius={0.5}
         padAngle={0.7}
         cornerRadius={3}
@@ -65,57 +65,11 @@ export default function Pie() {
                 spacing: 10
             }
         ]}
-        fill={[
-            {
-                match: {
-                    id: 'ruby'
-                },
-                id: 'dots'
-            },
-            {
-                match: {
-                    id: 'c'
-                },
-                id: 'dots'
-            },
-            {
-                match: {
-                    id: 'go'
-                },
-                id: 'dots'
-            },
-            {
-                match: {
-                    id: 'python'
-                },
-                id: 'dots'
-            },
-            {
-                match: {
-                    id: 'scala'
-                },
-                id: 'lines'
-            },
-            {
-                match: {
-                    id: 'lisp'
-                },
-                id: 'lines'
-            },
-            {
-                match: {
-                    id: 'elixir'
-                },
-                id: 'lines'
-            },
-            {
-                match: {
-                    id: 'javascript'
-                },
-                id: 'lines'
-            }
-        ]}
-        legends={[
+        enableArcLinkLabels={isReUsableComponents?false:true}
+
+        legends={
+            isReUsableComponents?[]:
+            [
             {
                 anchor: 'bottom',
                 direction: 'row',
@@ -139,7 +93,9 @@ export default function Pie() {
                     }
                 ]
             }
-        ]}
+        ]
+    
+    }
     />
         
         </Box>

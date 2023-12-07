@@ -9,7 +9,7 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import { Stack } from '@mui/material';
-
+ 
 export default function FAQ() {
 
 
@@ -25,7 +25,7 @@ export default function FAQ() {
      return (
       
       <>
-      
+ 
       <Stack direction={"column"} gap={2}>
       <Accordion defaultExpanded  onChange={handleChange('panel1')}>
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
