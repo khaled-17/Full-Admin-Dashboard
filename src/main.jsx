@@ -19,7 +19,7 @@ import Geography from "./page/Geography/Geography.jsx";
 import Form from "./page/Form/Form.jsx";
 import Contacts from "./page/Contacts/Contacts.jsx";
 import FAQ from "./page/FAQ/FAQ.jsx";
-import Barchart from "./page/Barchart/barchart.jsx";
+import Barchart from "./page/Barchart/Barchart.jsx";
 import NotFoundpage from "./page/NotFoundpage/NotFoundpage.jsx";
 
 const router = createBrowserRouter(
