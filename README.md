@@ -2,8 +2,8 @@
 ## [Demo 🌐](https://full-admin-dashboard.onrender.com/)
 ### features
 
-Responsive 📱 🖥 💻
-Dark Mode 🌓
+- Responsive 📱 🖥 💻
+- Dark Mode 🌓
 
 
 This project is a full admin dashboard built with Vite and various other technologies.
