@@ -14,8 +14,9 @@ import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
+import ToggoleMode from "../provider/Themeprovider/ToggoleMode";
 
-export default function TopBar({ open, handleDrawerOpen ,setMode}) {
+export default function TopBar({ open, handleDrawerOpen }) {
   const drawerWidth = 240;
 
   const AppBar = styled(MuiAppBar, {
@@ -117,25 +118,7 @@ const theme = useTheme()
 
 
  
-{theme.palette.mode=="light"? 
-  <IconButton onClick={()=>{
-    localStorage.setItem("currentMode",theme.palette.mode==='dark'?'light':'dark') ;     
-    setMode((prevMode) =>
-    prevMode === 'light' ? 'dark' : 'light',
-        );
-  }} color="inherit">
-            <LightModeOutlinedIcon />
-          </IconButton>
-:
- <IconButton onClick={()=>{
-   localStorage.setItem("currentMode",theme.palette.mode==='dark'?'light':'dark')      
-  setMode((prevMode) =>
-  prevMode === 'light' ? 'dark' : 'light',
-        );
- }} color="inherit">
-            <DarkModeOutlinedIcon />
-          </IconButton>
-}
+<ToggoleMode/>
          
 
 
