@@ -120,10 +120,10 @@ export default function SideBar({ open, handleDrawerClose }) {
   ];
 
   const Array3 = [
-    { text: "Bar Chart", icon: <BarChartOutlinedIcon />, path: "/bar" },
-    { text: "Pie Chart", icon: <PieChartOutlineOutlinedIcon />, path: "/pie" },
-    { text: "Line Chart", icon: <TimelineOutlinedIcon />, path: "/line" },
-    { text: "Geography Chart", icon: <MapOutlinedIcon />, path: "/geography" },
+    { text: "Bar Chart", icon: <BarChartOutlinedIcon />, path: "/nivoCharts/bar" },
+    { text: "Pie Chart", icon: <PieChartOutlineOutlinedIcon />, path: "/nivoCharts/pie" },
+    { text: "Line Chart", icon: <TimelineOutlinedIcon />, path: "/nivoCharts/line" },
+    { text: "Geography Chart", icon: <MapOutlinedIcon />, path: "/nivoCharts/geography" },
   ];
 
   return (

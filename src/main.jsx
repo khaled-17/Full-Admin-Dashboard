@@ -11,7 +11,7 @@ import {
 } from "react-router-dom";
 import Dashboard from "./page/Dashboard/Dashboard.jsx";
 import Team from "./page/Team/Team.jsx";
- import Calendar from "./page/Calendar/Calendar.jsx";
+import Calendar from "./page/Calendar/Calendar.jsx";
 import Pie from "./page/Pie/Pie.jsx";
 import Invoices from "./page/Invoices/Invoices.jsx";
 import Line from "./page/Line/Line.jsx";
@@ -29,18 +29,30 @@ const router = createBrowserRouter(
       <Route index element={<Dashboard />} />
 
       <Route path="team" element={<Team />} />
-      <Route path="bar" element={<Barchart />} />
       <Route path="calendar" element={<Calendar />} />
       <Route path="contacts" element={<Contacts />} />
-       <Route path="faq" element={<FAQ />} />
+      <Route path="faq" element={<FAQ />} />
       <Route path="form" element={<Form />} />
-      <Route path="geography" element={<Geography />} />
       <Route path="invoices" element={<Invoices />} />
-      <Route path="line" element={<Line />} />
-      <Route path="pie" element={<Pie />} />
       <Route path="Updates" element={<Updates />} />
+
+
+
+
+
+      <Route path="nivoCharts" >
+        <Route path="bar" element={<Barchart />} />
+        <Route path="line" element={<Line />} />
+        <Route path="Pie" element={<Pie />} />
+        <Route path="geography" element={<Geography />} />
+      </Route>
+
+
+
+
+
       <Route path="*" element={<NotFoundpage />} />
-     </Route>
+    </Route>
   )
 );
 
