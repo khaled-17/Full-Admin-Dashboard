@@ -1,18 +1,17 @@
-import Divider from "@mui/material/Divider";
-import IconButton from "@mui/material/IconButton";
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import React from "react";
+ import { Avatar, Tooltip, Typography,Divider,IconButton ,ListItem,
+  ListItemButton,List,
+  ListItemIcon,
+  ListItemText } from "@mui/material";
+
+ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
+
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import MuiDrawer from "@mui/material/Drawer";
-import List from "@mui/material/List";
-
-import { HomeOutlined } from "@mui/icons-material";
-import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+ 
+ import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
 import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
 import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
@@ -24,11 +23,10 @@ import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutl
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
-import React from "react";
+import ManageHistorySharpIcon from '@mui/icons-material/ManageHistorySharp';
+
 import { styled, useTheme } from "@mui/material/styles";
-import { Avatar, Tooltip, Typography } from "@mui/material";
-import { useNavigate } from "react-router-dom";
-import { useLocation } from "react-router-dom";
+ import { useLocation,useNavigate } from "react-router-dom";
 
 import { grey } from "@mui/material/colors";
 
@@ -113,6 +111,11 @@ export default function SideBar({ open, handleDrawerClose }) {
       text: "FAQ Page",
       icon: <HelpOutlineOutlinedIcon />,
       path: "/faq",
+    },
+    {
+      text: "Updates",
+      icon: <ManageHistorySharpIcon />,
+      path: "/Updates",
     },
   ];
 
@@ -245,8 +248,8 @@ export default function SideBar({ open, handleDrawerClose }) {
 
       <List>
         {Array3.map((item) => (
-          <Tooltip placement="right" title={open?null: item.text}>
-            <ListItem key={item.path} disablePadding sx={{ display: "block" }}>
+          <Tooltip key={item.path} placement="right" title={open?null: item.text}>
+            <ListItem  disablePadding sx={{ display: "block" }}>
               <ListItemButton
                 onClick={() => {
                   navigate(item.path);

@@ -21,6 +21,7 @@ import Contacts from "./page/Contacts/Contacts.jsx";
 import FAQ from "./page/FAQ/FAQ.jsx";
 import Barchart from "./page/Barchart/Barchart.jsx";
 import NotFoundpage from "./page/NotFoundpage/NotFoundpage.jsx";
+import Updates from "./page/Updates/Updates.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -37,6 +38,7 @@ const router = createBrowserRouter(
       <Route path="invoices" element={<Invoices />} />
       <Route path="line" element={<Line />} />
       <Route path="pie" element={<Pie />} />
+      <Route path="Updates" element={<Updates />} />
       <Route path="*" element={<NotFoundpage />} />
      </Route>
   )
