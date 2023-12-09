@@ -1,6 +1,6 @@
 import * as React from 'react';
  import { Stack } from '@mui/material';
-import OneAccordion from './oneAccordion';
+import OneAccordion from './OneAccordion';
   
 export default function Updates() {
 
