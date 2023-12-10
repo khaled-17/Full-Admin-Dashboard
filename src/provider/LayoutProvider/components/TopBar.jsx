@@ -1,4 +1,4 @@
- import { IconButton, Stack, Typography, useTheme } from "@mui/material";
+import { IconButton, Stack, Typography, useTheme } from "@mui/material";
 import Toolbar from "@mui/material/Toolbar";
 import Box from "@mui/material/Box";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -7,14 +7,13 @@ import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
 import { styled, alpha } from "@mui/material/styles";
 
-
 import { AddShoppingCart } from "@mui/icons-material";
-import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
-import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
-import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
-import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
-import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
-import ToggoleMode from "../provider/Themeprovider/ToggoleMode";
+import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
+import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
+import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
+import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
+import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
+import ToggoleMode from "../../Theme/ToggoleMode";
 
 export default function TopBar({ open, handleDrawerOpen }) {
   const drawerWidth = 240;
@@ -78,8 +77,7 @@ export default function TopBar({ open, handleDrawerOpen }) {
     },
   }));
 
-
-const theme = useTheme()
+  const theme = useTheme();
   return (
     <AppBar position="fixed" open={open}>
       <Toolbar>
@@ -106,42 +104,22 @@ const theme = useTheme()
           />
         </Search>
 
-
-
         <Box flexGrow={1} />
 
-
-
         <Stack direction={"row"}>
-      
+          <ToggoleMode />
 
-
-
- 
-<ToggoleMode/>
-         
-
-
-        
-        
           <IconButton color="inherit">
             <NotificationsNoneOutlinedIcon />
           </IconButton>
-          
-
 
           <IconButton color="inherit">
             <SettingsOutlinedIcon />
           </IconButton>
 
-
-
-
-
           <IconButton color="inherit">
             <PersonOutlineOutlinedIcon />
           </IconButton>
-
         </Stack>
       </Toolbar>
     </AppBar>

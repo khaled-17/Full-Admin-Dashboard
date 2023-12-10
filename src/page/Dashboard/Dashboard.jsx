@@ -10,7 +10,7 @@ export default function Dashboard() {
   return (
     <div>
       <Stack direction={"row"} justifyContent={"space-between"} alignItems={"center"}>
-        <Header titel={"Dashboard V-2.0.0"} />
+        <Header titel={"Dashboard V-2.2.0"} />
         <Box sx={{ textAlign: "right" }}>
           <Button
             sx={{ padding: "6px 8px", margin: 2 }}

@@ -1,14 +1,14 @@
-import LayoutProvider from "./provider/LayoutProvider";
-import TheThemeProvider from "./provider/Themeprovider/TheThemeProvider";
+import LayoutProvider from "./provider/LayoutProvider/LayoutProvider";
+import TheThemeProvider from "./provider/Theme/TheThemeProvider";
 
 function App() {
- return (
-   <>
-     <TheThemeProvider>
-       <LayoutProvider />
-     </TheThemeProvider>
-   </>
- );
+  return (
+    <>
+      <TheThemeProvider>
+        <LayoutProvider />
+      </TheThemeProvider>
+    </>
+  );
 }
 
 export default App;

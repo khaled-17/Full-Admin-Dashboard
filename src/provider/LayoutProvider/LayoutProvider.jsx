@@ -1,12 +1,12 @@
 import * as React from "react";
-import {styled} from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
 
-import TopBar from "../components/TopBar";
-import SideBar from "../components/SideBar.jsx";
- import { Outlet } from "react-router-dom";
- 
+import TopBar from "./components/TopBar";
+import SideBar from "./components/SideBar.jsx";
+import { Outlet } from "react-router-dom";
+
 const DrawerHeader = styled("div")(({ theme }) => ({
   display: "flex",
   alignItems: "center",
@@ -18,8 +18,12 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 
 export default function MiniDrawer() {
   const [open, setOpen] = React.useState(false);
-  const handleDrawerOpen = () => {setOpen(true);};
-  const handleDrawerClose = () => {setOpen(false);};
+  const handleDrawerOpen = () => {
+    setOpen(true);
+  };
+  const handleDrawerClose = () => {
+    setOpen(false);
+  };
 
   return (
     <Box sx={{ display: "flex" }}>

@@ -6,7 +6,7 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
-import Line from "../Line/Line";
+import Line from "../../components/nivoCharts/Line";
 import React from "react";
 import { DownloadOutlined } from "@mui/icons-material";
 import { Transactions } from "./data";
@@ -45,7 +45,7 @@ const Row2 = () => {
           </Box>
         </Stack>
 
-        <Line  />
+        <Line />
       </Paper>
 
       <Box
@@ -68,9 +68,10 @@ const Row2 = () => {
           </Typography>
         </Paper>
 
-        {Transactions.map((item) => {
+        {Transactions.map((item,index) => {
           return (
             <Paper
+            key={index}
               sx={{
                 mt: 0.4,
                 display: "flex",

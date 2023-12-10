@@ -12,16 +12,17 @@ import {
 import Dashboard from "./page/Dashboard/Dashboard.jsx";
 import Team from "./page/Team/Team.jsx";
 import Calendar from "./page/Calendar/Calendar.jsx";
-import Pie from "./page/Pie/Pie.jsx";
 import Invoices from "./page/Invoices/Invoices.jsx";
-import Line from "./page/Line/Line.jsx";
-import Geography from "./page/Geography/Geography.jsx";
 import Form from "./page/Form/Form.jsx";
 import Contacts from "./page/Contacts/Contacts.jsx";
 import FAQ from "./page/FAQ/FAQ.jsx";
-import Barchart from "./page/Barchart/Barchart.jsx";
 import NotFoundpage from "./page/NotFoundpage/NotFoundpage.jsx";
 import Updates from "./page/Updates/Updates.jsx";
+
+import Pie from "./components/nivoCharts/Pie.jsx";
+import Line from "./components/nivoCharts/Line.jsx";
+import Barchart from "./components/nivoCharts/Barchart.jsx";
+import Geography from "./components/nivoCharts/Geography/Geography.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -36,20 +37,12 @@ const router = createBrowserRouter(
       <Route path="invoices" element={<Invoices />} />
       <Route path="Updates" element={<Updates />} />
 
-
-
-
-
-      <Route path="nivoCharts" >
+      <Route path="nivoCharts">
         <Route path="bar" element={<Barchart />} />
         <Route path="line" element={<Line />} />
         <Route path="Pie" element={<Pie />} />
         <Route path="geography" element={<Geography />} />
       </Route>
-
-
-
-
 
       <Route path="*" element={<NotFoundpage />} />
     </Route>

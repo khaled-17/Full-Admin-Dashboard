@@ -1,20 +1,48 @@
-import React from "react";
+ import React from "react";
 import { ResponsiveBar } from "@nivo/bar";
 import { Box, useTheme } from "@mui/material";
-import {TheTheme}  from "../TheTheme.js";
+import { TheTheme } from "../../page/TheTheme.js";
 
-const Bar = ({isDashbord = false ,TheData,TheKey }) => {
- 
+const StaticKey = ["Spain", "France"];
 
-  
+const StaticData = [
+  {
+    year: 2019,
+    Spain: 900,
+    France: 1400,
+  },
+
+  {
+    year: 2020,
+    Spain: 1000,
+    France: 1500,
+  },
+
+  {
+    year: 2021,
+    Spain: 1100,
+    France: 1600,
+  },
+
+  {
+    year: 2022,
+    Spain: 1200,
+    France: 1700,
+  },
+];
+const StaticIndex = "year";
+
+export default function Barchart({
+  isDashbord = false,
+  isReUsableComponents = false,
+}) {
   const myTheme = TheTheme(useTheme());
-
-   return (
-    <Box sx={{ height:isDashbord? "300px": "75vh" }}>
+  return (
+    <Box sx={{ height: isDashbord ? "300px" : "75vh" }}>
       <ResponsiveBar
-        data={TheData}
-        keys={TheKey}
-        indexBy="year"
+        data={StaticData}
+        keys={StaticKey}
+        indexBy={StaticIndex}
         theme={myTheme}
         margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
         padding={0.3}
@@ -65,7 +93,7 @@ const Bar = ({isDashbord = false ,TheData,TheKey }) => {
           tickSize: 5,
           tickPadding: 5,
           tickRotation: 0,
-          legend: isDashbord? null : "Year",
+          legend: isDashbord ? null : "Year",
           legendPosition: "middle",
           legendOffset: 35,
         }}
@@ -73,7 +101,7 @@ const Bar = ({isDashbord = false ,TheData,TheKey }) => {
           tickSize: 5,
           tickPadding: 5,
           tickRotation: 0,
-          legend:  isDashbord? null : "salary/month",
+          legend: isDashbord ? null : "salary/month",
           legendPosition: "middle",
           legendOffset: -55,
         }}
@@ -117,6 +145,4 @@ const Bar = ({isDashbord = false ,TheData,TheKey }) => {
       />
     </Box>
   );
-};
-
-export default Bar;
+}

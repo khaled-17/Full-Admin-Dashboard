@@ -1,8 +1,8 @@
-import { Stack, Paper, Typography, useTheme } from "@mui/material";
-import Pie from "../Pie/Pie";
-import Barchart from "../Barchart/Barchart";
+import { Stack, Paper, Typography, useTheme, Box } from "@mui/material";
+import Pie from "../../components/nivoCharts/Pie";
+import Barchart from "../../components/nivoCharts/Barchart";
 import React from "react";
-import Geography from "../Geography/Geography";
+import Geography from "../../components/nivoCharts/Geography/Geography";
 
 export default function Row3() {
   const theme = useTheme();
@@ -15,7 +15,17 @@ export default function Row3() {
         >
           compony
         </Typography>
+
+        <Box
+sx={{ borderColor: 'primary.main',border: 1, }}
+  height={ "500px" }
+width={ "100%" }
+>
+
         <Pie isReUsableComponents={true} ReData={undefined} />
+</Box>
+
+
 
         <Typography variant="h6" align="center" sx={{ mt: "15px" }}>
           $48,352 revenue generated
@@ -33,19 +43,16 @@ export default function Row3() {
         </Typography>
 
         <Barchart />
-
-
       </Paper>
       <Paper sx={{ flexGrow: 1, minWidth: "400px", width: "32%" }}>
-      <Typography
+        <Typography
           color={theme.palette.secondary.main}
           sx={{ padding: "30px 30px 0 30px " }}
         >
           Sales Quantity
         </Typography>
 
-<Geography/>
-
+        <Geography />
       </Paper>
     </Stack>
   );
