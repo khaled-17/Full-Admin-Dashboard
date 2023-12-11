@@ -23,30 +23,45 @@ import Pie from "./components/nivoCharts/Pie.jsx";
 import Line from "./components/nivoCharts/Line.jsx";
 import Barchart from "./components/nivoCharts/Barchart.jsx";
 import Geography from "./components/nivoCharts/Geography/Geography.jsx";
+import PrivateRoutes from "./provider/ProtectedProvider/PrivateRoutes.jsx";
+import SignIn from "./page/AuthForms/SignIn.jsx";
+import SignUp from "./page/AuthForms/SignUp.jsx";
+import ForgotPassword from "./page/AuthForms/ForgotPassword.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<App />}>
-      <Route index element={<Dashboard />} />
 
+    <Route >
+
+    <Route path="SignIn" element={<SignIn/>} />
+    <Route path="SignUp" element={<SignUp/>} />
+    <Route path="ForgotPassword" element={<ForgotPassword/>} />
+    
+
+    <Route path="/" element={<PrivateRoutes />}>
+      <Route index element={<Dashboard />} />
       <Route path="team" element={<Team />} />
       <Route path="calendar" element={<Calendar />} />
       <Route path="contacts" element={<Contacts />} />
       <Route path="faq" element={<FAQ />} />
-      <Route path="form" element={<Form />} />
       <Route path="invoices" element={<Invoices />} />
       <Route path="Updates" element={<Updates />} />
-
-      <Route path="nivoCharts">
+       <Route path="nivoCharts">
         <Route path="bar" element={<Barchart />} />
         <Route path="line" element={<Line />} />
         <Route path="Pie" element={<Pie />} />
         <Route path="geography" element={<Geography />} />
       </Route>
-
       <Route path="*" element={<NotFoundpage />} />
     </Route>
+
+   
+
+
+
+    </Route>
   )
+
 );
 
 ReactDOM.createRoot(document.getElementById("root")).render(

@@ -24,6 +24,7 @@ import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import ManageHistorySharpIcon from '@mui/icons-material/ManageHistorySharp';
+import PhishingIcon from '@mui/icons-material/Phishing';
 
 import { styled, useTheme } from "@mui/material/styles";
  import { useLocation,useNavigate } from "react-router-dom";
@@ -101,22 +102,12 @@ export default function SideBar({ open, handleDrawerClose }) {
   ];
 
   const Array2 = [
-    { text: "Profile Form", icon: <PersonOutlinedIcon />, path: "/form" },
-    {
-      text: "Calendar",
-      icon: <CalendarTodayOutlinedIcon />,
-      path: "/calendar",
-    },
-    {
-      text: "FAQ Page",
-      icon: <HelpOutlineOutlinedIcon />,
-      path: "/faq",
-    },
-    {
-      text: "Updates",
-      icon: <ManageHistorySharpIcon />,
-      path: "/Updates",
-    },
+    { text: "Profile Form", icon: <PersonOutlinedIcon />, path: "/form" }
+    ,{text: "Calendar",icon: <CalendarTodayOutlinedIcon />,path: "/calendar",}
+    ,{text: "FAQ Page",icon: <HelpOutlineOutlinedIcon />,path: "/faq",}
+    ,{text: "Updates",icon: <ManageHistorySharpIcon />,path: "/Updates",}
+    ,{text: "Updates",icon: <PhishingIcon />,path: "/Hooks",}
+  
   ];
 
   const Array3 = [
