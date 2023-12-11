@@ -10,11 +10,13 @@ import IconButton from '@mui/material/IconButton';
 import PersonAdd from '@mui/icons-material/PersonAdd';
 import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
-import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
+ import { useNavigate } from "react-router-dom";
 
 
 
 export default function AccountMenu() {
+  const navigate = useNavigate();
+
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -44,8 +46,7 @@ export default function AccountMenu() {
         id="account-menu"
         open={open}
         onClose={handleClose}
-        onClick={handleClose}
-        PaperProps={{
+         PaperProps={{
           elevation: 0,
           sx: {
             overflow: 'visible',
@@ -75,7 +76,7 @@ export default function AccountMenu() {
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
       >
        
-        <MenuItem onClick={handleClose}>
+        <MenuItem onClick={() => {navigate("Myaccount");}}>
           <Avatar /> My account
         </MenuItem>
         <Divider />
@@ -84,7 +85,7 @@ export default function AccountMenu() {
         
 
 
-        <MenuItem onClick={handleClose}>
+        <MenuItem onClick={() => {navigate("Addanotheraccount");}}>
           <ListItemIcon>
             <PersonAdd fontSize="small" />
           </ListItemIcon>
@@ -97,18 +98,23 @@ export default function AccountMenu() {
 
 
 
-        <MenuItem onClick={handleClose}>
+        <MenuItem 
+         onClick={() => {navigate("Settings");}}>
           <ListItemIcon>
             <Settings fontSize="small" />
           </ListItemIcon>
           Settings
         </MenuItem>
-        <MenuItem onClick={handleClose}>
+
+
+        <MenuItem onClick={() => {navigate("Logout");}}>
           <ListItemIcon>
             <Logout fontSize="small" />
           </ListItemIcon>
           Logout
         </MenuItem>
+
+
       </Menu>
     </React.Fragment>
   );

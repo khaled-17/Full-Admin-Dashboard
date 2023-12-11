@@ -15,27 +15,47 @@ function checkMode(params) {
   return theme.palette.mode
 }
 
-const setLocalStorage=()=>{
-  localStorage.setItem(
-    "currentMode",
-    checkMode() === "dark" ? "light" : "dark"
-  );
-  setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
- 
-}
 
+
+ 
+
+
+
+ 
   return (
     <>
   
-      {checkMode() == "light" ? (
-        <IconButton onClick={setLocalStorage}color="inherit"        >
-          <LightModeOutlinedIcon />
-        </IconButton>
-      ) : (
-        <IconButton onClick={setLocalStorage}color="inherit"        >
-          <DarkModeOutlinedIcon />
-        </IconButton>
-      )}
+  {theme.palette.mode === "light" ? (
+            <IconButton
+              onClick={() => {
+                localStorage.setItem(
+                  "currentMode",
+                  theme.palette.mode === "light" ? "dark" : "light"
+                );
+                setMode((prevMode) =>
+                  prevMode === "light" ? "dark" : "light"
+                );
+              }}
+              color="inherit"
+            >
+              <LightModeOutlinedIcon />
+            </IconButton>
+          ) : (
+            <IconButton
+              onClick={() => {
+                localStorage.setItem(
+                  "currentMode",
+                  theme.palette.mode === "dark" ? "light" : "dark"
+                );
+                setMode((prevMode) =>
+                  prevMode === "light" ? "dark" : "light"
+                );
+              }}
+              color="inherit"
+            >
+              <DarkModeOutlinedIcon />
+            </IconButton>
+          )}
     </>
   );
 }
