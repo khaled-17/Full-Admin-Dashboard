@@ -1,7 +1,7 @@
 import React from "react";
 import { ResponsivePie } from "@nivo/pie";
 import { Box, useTheme } from "@mui/material";
-import { TheTheme } from "../../page/TheTheme";
+import { TheTheme } from "./TheTheme";
 
 // Static  data
 const Staticdata = [
@@ -31,25 +31,24 @@ const Staticdata = [
   },
 ];
 
-export default function Pie({ isReUsableComponents = false, ReData ,pieColors}) {
+export default function Pie({
+  isReUsableComponents = false,
+  ReData,
+  pieColors,
+}) {
   const myTheme = TheTheme(useTheme());
 
-  
-   
   const theme = useTheme();
   return (
-    <Box  
-    sx={{mx: 'auto'}}
-    height={isReUsableComponents ? "100%" : "80vh" }
-    width={isReUsableComponents ? "100%" : "80vh" }
-
+    <Box
+      sx={{ mx: "auto" }}
+      height={isReUsableComponents ? "100%" : "80vh"}
+      width={isReUsableComponents ? "100%" : "80vh"}
     >
       <ResponsivePie
         theme={myTheme}
-        data={ReData||Staticdata}
-    
-        colors={{ scheme: pieColors||'nivo' }}
-
+        data={ReData || Staticdata}
+        colors={{ scheme: pieColors || "nivo" }}
         margin={
           isReUsableComponents
             ? { top: 8, right: 80, bottom: 10, left: 80 }
@@ -64,7 +63,6 @@ export default function Pie({ isReUsableComponents = false, ReData ,pieColors}) 
           from: "color",
           modifiers: [["darker", 0.2]],
         }}
-        
         arcLinkLabelsSkipAngle={10}
         arcLinkLabelsTextColor={theme.palette.text.primary}
         arcLinkLabelsThickness={2}
@@ -75,7 +73,6 @@ export default function Pie({ isReUsableComponents = false, ReData ,pieColors}) 
           modifiers: [["darker", 2]],
         }}
         arcLabel="id"
- 
         defs={[
           {
             id: "dots",
@@ -100,32 +97,29 @@ export default function Pie({ isReUsableComponents = false, ReData ,pieColors}) 
         enableArcLabels={isReUsableComponents ? false : true}
         legends={[
           {
-              anchor: 'bottom',
-              direction: 'row',
-              justify: false,
-              translateX: 0,
-              translateY: 56,
-              itemsSpacing: 0,
-              itemWidth: 100,
-              itemHeight: 18,
-              itemTextColor: '#999',
-              itemDirection: 'left-to-right',
-              itemOpacity: 1,
-              symbolSize: 18,
-              symbolShape: 'circle',
-              effects: [
-                  {
-                      on: 'hover',
-                      style: {
-                          itemTextColor: '#000'
-                      }
-                  }
-              ]
-          }
-      ]}
-
-  
-        
+            anchor: "bottom",
+            direction: "row",
+            justify: false,
+            translateX: 0,
+            translateY: 56,
+            itemsSpacing: 0,
+            itemWidth: 100,
+            itemHeight: 18,
+            itemTextColor: "#999",
+            itemDirection: "left-to-right",
+            itemOpacity: 1,
+            symbolSize: 18,
+            symbolShape: "circle",
+            effects: [
+              {
+                on: "hover",
+                style: {
+                  itemTextColor: "#000",
+                },
+              },
+            ],
+          },
+        ]}
       />
     </Box>
   );

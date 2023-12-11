@@ -3,7 +3,7 @@ import { ResponsiveChoropleth } from "@nivo/geo";
 import React from "react";
 import { data } from "./data.js";
 import { geo } from "./world_countries.js";
-import { TheTheme } from "../../../page/TheTheme.js";
+import { TheTheme } from "../TheTheme.js";
 
 export default function Geography() {
   const myTheme = TheTheme(useTheme());

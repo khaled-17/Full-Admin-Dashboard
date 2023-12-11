@@ -2,7 +2,7 @@ import { Box, Paper, Stack, Typography, useTheme } from "@mui/material";
 import Pie from "../../components/nivoCharts/Pie";
 import React from "react";
 import { ResponsivePie } from "@nivo/pie";
-import { TheTheme } from "../TheTheme";
+import { TheTheme } from "../../components/nivoCharts/TheTheme";
 
 export default function Card({
   Icon,

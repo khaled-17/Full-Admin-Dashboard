@@ -1,7 +1,7 @@
 import { Box, useTheme } from "@mui/material";
 import React from "react";
 import { ResponsiveLine } from "@nivo/line";
-import { TheTheme } from "../../page/TheTheme";
+import { TheTheme } from "./TheTheme";
 
 //Static data
 const Staticdata = [
