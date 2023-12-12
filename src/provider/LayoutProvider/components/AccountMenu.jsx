@@ -107,7 +107,13 @@ export default function AccountMenu() {
         </MenuItem>
 
 
-        <MenuItem onClick={() => {navigate("Logout");}}>
+        <MenuItem 
+        href='/'
+        onClick={() => {
+          navigate("SignIn")
+           localStorage.removeItem('authData');
+
+          }}>
           <ListItemIcon>
             <Logout fontSize="small" />
           </ListItemIcon>

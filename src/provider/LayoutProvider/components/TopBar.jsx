@@ -9,7 +9,7 @@ import { styled, alpha } from "@mui/material/styles";
 
  import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
 import ToggoleMode from "../../Theme/ToggoleMode";
-import AccountMenu from "../../../components/AccountMenu";
+import AccountMenu from "./AccountMenu";
 
 export default function TopBar({ open, handleDrawerOpen }) {
   const drawerWidth = 240;

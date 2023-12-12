@@ -27,6 +27,7 @@ import PrivateRoutes from "./provider/ProtectedProvider/PrivateRoutes.jsx";
 import SignIn from "./page/AuthForms/SignIn.jsx";
 import SignUp from "./page/AuthForms/SignUp.jsx";
 import ForgotPassword from "./page/AuthForms/ForgotPassword.jsx";
+import ProtectedProvider from "./provider/ProtectedProvider/ProtectedProvider.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -37,25 +38,24 @@ const router = createBrowserRouter(
     <Route path="SignUp" element={<SignUp/>} />
     <Route path="ForgotPassword" element={<ForgotPassword/>} />
     
-
-    <Route path="/" element={<PrivateRoutes />}>
-      <Route index element={<Dashboard />} />
-      <Route path="team" element={<Team />} />
-      <Route path="calendar" element={<Calendar />} />
-      <Route path="contacts" element={<Contacts />} />
-      <Route path="faq" element={<FAQ />} />
-      <Route path="invoices" element={<Invoices />} />
-      <Route path="Updates" element={<Updates />} />
+     <Route path="/" element={<App />}>
+      {/* <Route index element={<Dashboard />} /> */}
+      <Route index element={<ProtectedProvider><Dashboard /></ProtectedProvider>} />
+      <Route path="team" element={<ProtectedProvider> <Team /> </ProtectedProvider>} />
+      <Route path="calendar" element={<ProtectedProvider> <Calendar /> </ProtectedProvider>} />
+      <Route path="contacts" element={<ProtectedProvider><Contacts /></ProtectedProvider>} />
+      <Route path="faq" element={<ProtectedProvider><FAQ /></ProtectedProvider>} />
+      <Route path="invoices" element={<ProtectedProvider><Invoices /></ProtectedProvider>} />
+      <Route path="Updates" element={<ProtectedProvider><Updates /></ProtectedProvider>} />
        <Route path="nivoCharts">
-        <Route path="bar" element={<Barchart />} />
-        <Route path="line" element={<Line />} />
-        <Route path="Pie" element={<Pie />} />
-        <Route path="geography" element={<Geography />} />
+        <Route path="bar" element={<ProtectedProvider><Barchart /></ProtectedProvider>} />
+        <Route path="line" element={<ProtectedProvider><Line /></ProtectedProvider>} />
+        <Route path="Pie" element={<ProtectedProvider><Pie /></ProtectedProvider>} />
+        <Route path="geography" element={<ProtectedProvider><Geography /></ProtectedProvider>} />
       </Route>
       <Route path="*" element={<NotFoundpage />} />
     </Route>
-
-   
+    
 
 
 

@@ -31,15 +31,27 @@ function Copyright(props) {
 const defaultTheme = createTheme();
 
 export default function SignIn() {
+
+
+  const navigate = useNavigate();
+
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+   
+   const authData ={
+    email: data.get('email'),
+    password: data.get('password'),
+  }
+
+    console.log(authData);
+
+    localStorage.setItem("authData",true);
+    navigate('/');
+
+
   };
-  const navigate = useNavigate();
 
 
   return (
@@ -62,6 +74,7 @@ export default function SignIn() {
           </Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
             <TextField
+             value={'email@email.com'}
               margin="normal"
               required
               fullWidth
@@ -72,6 +85,8 @@ export default function SignIn() {
               autoFocus
             />
             <TextField
+              value={'password'}
+
               margin="normal"
               required
               fullWidth
