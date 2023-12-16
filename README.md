@@ -1,4 +1,26 @@
-# Full Admin Dashboard
+
+<div align="center">
+    <a href="https://www.idurarapp.com/">
+  <img src="https://avatars.githubusercontent.com/u/50052356?s=200&v=4" width="128px" />
+    </a>
+    <h1>Open Code Source Admin Dashboard  React.js</h1>
+    <p align="center">
+        <p>Full Admin Dashboard | Simple To Use | 2 Languages </p>
+    </p>
+    
+  [https://full-admin-dashboard.onrender.com/](https://full-admin-dashboard.onrender.com/)
+
+## EN AR
+IDURAR is Open "Fair-Code" Source ERP / CRM (Invoice / Inventory / Accounting / HR) Based on Advanced Mern Stack (Node.js / Express.js / MongoDb / React.js ) with Ant Design (AntD) and Redux
+
+</div>
+
+**Live App Demo** : [https://full-admin-dashboard.onrender.com/](https://full-admin-dashboard.onrender.com/)
+```
+🚀 Give a Star ⭐️ & Fork to this project ... Happy coding! 🤩`
+```
+
+ # Full Admin Dashboard
 ## [Demo 🌐](https://full-admin-dashboard.onrender.com/)
 ### features
 
@@ -50,3 +72,15 @@ Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+
+ 
+ 
+ 
+
+ 
+
+## Show your support
+
+Dont forget to give a ⭐️ to this project ... Happy coding!
+
